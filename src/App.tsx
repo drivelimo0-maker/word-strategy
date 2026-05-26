@@ -61,7 +61,9 @@ interface GradientTitleProps {
 
 function GradientTitle({ children, className = "" }: GradientTitleProps) {
   return (
-    <span className={`bg-gradient-to-r from-[#0A1F44] via-[#123C73] to-[#1E3A8A] bg-clip-text text-transparent ${className}`}>
+    <span
+      className={`bg-gradient-to-r from-[#0A1F44] via-[#123C73] to-[#1E3A8A] bg-clip-text text-transparent ${className}`}
+    >
       {children}
     </span>
   );
@@ -94,19 +96,32 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
           </h1>
 
           <div className="mt-7 max-w-2xl rounded-[2rem] border-2 border-[#0A1F44] bg-[#0A1F44] p-5 text-[#F8F4EA] shadow-[8px_8px_0_#0A1F44]">
-            <p className="text-3xl font-black md:text-5xl">RIGHT PEOPLE. RIGHT PLACE.</p>
-            <p className="mt-3 text-base font-semibold opacity-75">The core belief behind every hiring, office, and operations decision we make.</p>
+            <p className="text-3xl font-black md:text-5xl">
+              RIGHT PEOPLE. RIGHT PLACE.
+            </p>
+            <p className="mt-3 text-base font-semibold opacity-75">
+              The core belief behind every hiring, office, and operations
+              decision we make.
+            </p>
           </div>
 
           <p className="mt-7 max-w-2xl text-lg font-medium leading-8 opacity-75 md:text-xl">
-            Partner Desk helps US and Canada companies set up complete offshore operations: hiring, office space, infrastructure, management, and cost planning under one trusted system.
+            Partner Desk helps US and Canada companies set up complete offshore
+            operations: hiring, office space, infrastructure, management, and
+            cost planning under one trusted system.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a href="#contact" className="inline-flex h-14 items-center justify-center rounded-full bg-[#0A1F44] px-8 text-base font-black text-[#F8F4EA] transition hover:bg-[#0A1F44]/85">
-              Plan My Offshore Office 
+            <a
+              href="#contact"
+              className="inline-flex h-14 items-center justify-center rounded-full bg-[#0A1F44] px-8 text-base font-black text-[#F8F4EA] transition hover:bg-[#0A1F44]/85"
+            >
+              Plan My Offshore Office
             </a>
-            <a href="#services" className="inline-flex h-14 items-center justify-center rounded-full border-2 border-[#0A1F44] bg-transparent px-8 text-base font-black transition hover:bg-[#0A1F44] hover:text-[#F8F4EA]">
+            <a
+              href="#services"
+              className="inline-flex h-14 items-center justify-center rounded-full border-2 border-[#0A1F44] bg-transparent px-8 text-base font-black transition hover:bg-[#0A1F44] hover:text-[#F8F4EA]"
+            >
               View Services
             </a>
           </div>
@@ -138,8 +153,12 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
             </div>
             <div className="mt-5 rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6">
               <div className="text-4xl">{services[activeService].icon}</div>
-              <h3 className="mt-4 text-2xl font-black">{services[activeService].title}</h3>
-              <p className="mt-2 font-medium leading-7 opacity-70">{services[activeService].text}</p>
+              <h3 className="mt-4 text-2xl font-black">
+                {services[activeService].title}
+              </h3>
+              <p className="mt-2 font-medium leading-7 opacity-70">
+                {services[activeService].text}
+              </p>
             </div>
           </div>
         </div>
@@ -148,7 +167,10 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
       <section className="border-y-2 border-[#0A1F44] bg-[#0A1F44] py-5 text-[#F8F4EA]">
         <div className="mx-auto grid max-w-7xl gap-4 px-5 md:grid-cols-4 md:px-8">
           {stats.map(([num, label]) => (
-            <div key={label} className="flex items-center gap-4 rounded-3xl border border-white/20 p-4">
+            <div
+              key={label}
+              className="flex items-center gap-4 rounded-3xl border border-white/20 p-4"
+            >
               <p className="text-3xl font-black">{num}</p>
               <p className="text-sm font-bold opacity-70">{label}</p>
             </div>
@@ -159,19 +181,42 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-2 md:items-center">
           <div className="rounded-[2.5rem] border-2 border-[#0A1F44] bg-[#0A1F44] p-8 text-[#F8F4EA] shadow-[12px_12px_0_#0A1F44]">
-            <p className="text-5xl font-black md:text-7xl">One desk. Complete setup.</p>
+            <p className="text-5xl font-black md:text-7xl">
+              One desk. Complete setup.
+            </p>
             <p className="mt-5 text-lg font-medium leading-8 opacity-75">
-              You don’t need separate vendors for hiring, office space, reporting, billing, and local management. Partner Desk connects everything into one clear system.
+              You don’t need separate vendors for hiring, office space,
+              reporting, billing, and local management. Partner Desk connects
+              everything into one clear system.
             </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {[
-              ["01", "Hire smarter", "Find people who match your role, culture, and growth plan."],
-              ["02", "Set up faster", "Plan office space, seats, systems, and infrastructure without confusion."],
-              ["03", "Operate clearly", "Keep reports, management, salaries, and invoices structured."],
-              ["04", "Scale safely", "Grow your offshore ecosystem with cost control and transparency."],
+              [
+                "01",
+                "Hire smarter",
+                "Find people who match your role, culture, and growth plan.",
+              ],
+              [
+                "02",
+                "Set up faster",
+                "Plan office space, seats, systems, and infrastructure without confusion.",
+              ],
+              [
+                "03",
+                "Operate clearly",
+                "Keep reports, management, salaries, and invoices structured.",
+              ],
+              [
+                "04",
+                "Scale safely",
+                "Grow your offshore ecosystem with cost control and transparency.",
+              ],
             ].map(([num, title, text]) => (
-              <div key={title} className="rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44]">
+              <div
+                key={title}
+                className="rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44]"
+              >
                 <p className="text-sm font-black opacity-50">{num}</p>
                 <h3 className="mt-4 text-2xl font-black">{title}</h3>
                 <p className="mt-3 font-medium leading-7 opacity-70">{text}</p>
@@ -185,21 +230,31 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
         <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <SectionLabel>What We Merge</SectionLabel>
-            <h2 className="mt-3 text-4xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent md:text-6xl">Everything your offshore office needs.</h2>
+            <h2 className="mt-3 text-4xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent md:text-6xl">
+              Everything your offshore office needs.
+            </h2>
           </div>
           <p className="max-w-md text-lg font-medium leading-8 opacity-70">
-            Instead of dealing with multiple vendors, Partner Desk becomes your single execution partner.
+            Instead of dealing with multiple vendors, Partner Desk becomes your
+            single execution partner.
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-4">
           {services.map((service) => (
-            <div key={service.title} className="h-full rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44] transition hover:-translate-y-2 hover:shadow-[12px_12px_0_#0A1F44]">
+            <div
+              key={service.title}
+              className="h-full rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44] transition hover:-translate-y-2 hover:shadow-[12px_12px_0_#0A1F44]"
+            >
               <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A1F44] text-2xl text-[#F8F4EA]">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent tracking-tight">{service.title}</h3>
-              <p className="mt-4 font-medium leading-7 opacity-70">{service.text}</p>
+              <h3 className="text-2xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent tracking-tight">
+                {service.title}
+              </h3>
+              <p className="mt-4 font-medium leading-7 opacity-70">
+                {service.text}
+              </p>
             </div>
           ))}
         </div>
@@ -210,7 +265,9 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
               <SectionLabel>Built For Global Teams</SectionLabel>
-              <h2 className="mt-3 text-4xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent md:text-6xl">A real operating base, not just outsourcing.</h2>
+              <h2 className="mt-3 text-4xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent md:text-6xl">
+                A real operating base, not just outsourcing.
+              </h2>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
@@ -221,7 +278,10 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
                 "Team coordination",
                 "Monthly reporting",
               ].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-3xl border-2 border-[#0A1F44] p-4 font-black">
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-3xl border-2 border-[#0A1F44] p-4 font-black"
+                >
                   <span>✅</span> {item}
                 </div>
               ))}
@@ -230,15 +290,23 @@ function HomePage({ activeService, setActiveService }: HomePageProps) {
         </div>
       </section>
 
-      <section id="process" className="mx-5 rounded-[2.5rem] border-2 border-[#0A1F44] bg-[#F8F4EA] py-16 shadow-[10px_10px_0_#0A1F44] md:mx-8">
+      <section
+        id="process"
+        className="mx-5 rounded-[2.5rem] border-2 border-[#0A1F44] bg-[#F8F4EA] py-16 shadow-[10px_10px_0_#0A1F44] md:mx-8"
+      >
         <div className="mx-auto max-w-6xl px-5">
           <div className="text-center">
             <SectionLabel>Our Process</SectionLabel>
-            <h2 className="mt-3 text-4xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent md:text-6xl">From idea to operating office.</h2>
+            <h2 className="mt-3 text-4xl font-black bg-gradient-to-r from-[#0A1F44] to-[#1E3A8A] bg-clip-text text-transparent md:text-6xl">
+              From idea to operating office.
+            </h2>
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-5">
             {steps.map((step, index) => (
-              <div key={step} className="rounded-3xl border-2 border-[#0A1F44] bg-[#F8F4EA] p-5">
+              <div
+                key={step}
+                className="rounded-3xl border-2 border-[#0A1F44] bg-[#F8F4EA] p-5"
+              >
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-[#0A1F44] text-sm font-black text-[#F8F4EA]">
                   {index + 1}
                 </div>
@@ -259,7 +327,8 @@ function ModelsPage() {
     {
       tag: "Model 01",
       title: "Full Managed Office Model",
-      subtitle: "We manage your office, finance, hiring, and day-to-day operations.",
+      subtitle:
+        "We manage your office, finance, hiring, and day-to-day operations.",
       icon: "🏢",
       points: [
         "Complete hiring and team structuring",
@@ -272,7 +341,8 @@ function ModelsPage() {
     {
       tag: "Model 02",
       title: "Talent + Space Model",
-      subtitle: "We find the right talent and office space; your own manager handles the operations.",
+      subtitle:
+        "We find the right talent and office space; your own manager handles the operations.",
       icon: "👥",
       points: [
         "We source and shortlist strong talent for your roles",
@@ -293,26 +363,40 @@ function ModelsPage() {
             <GradientTitle>Choose how you want to build.</GradientTitle>
           </h1>
           <p className="mt-7 max-w-2xl text-lg font-medium leading-8 opacity-75 md:text-xl">
-            Every company has a different comfort level. Some want us to manage everything. Some only need talent and space while their own manager runs the setup.
+            Every company has a different comfort level. Some want us to manage
+            everything. Some only need talent and space while their own manager
+            runs the setup.
           </p>
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           {models.map((model) => (
-            <div key={model.title} className="rounded-[2.5rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[12px_12px_0_#0A1F44] md:p-8">
+            <div
+              key={model.title}
+              className="rounded-[2.5rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[12px_12px_0_#0A1F44] md:p-8"
+            >
               <div className="flex items-start justify-between gap-5">
                 <div>
-                  <p className="inline-flex rounded-full bg-[#0A1F44] px-4 py-2 text-sm font-black text-[#F8F4EA]">{model.tag}</p>
+                  <p className="inline-flex rounded-full bg-[#0A1F44] px-4 py-2 text-sm font-black text-[#F8F4EA]">
+                    {model.tag}
+                  </p>
                   <h2 className="mt-6 text-4xl font-black md:text-5xl">
                     <GradientTitle>{model.title}</GradientTitle>
                   </h2>
                 </div>
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl border-2 border-[#0A1F44] bg-[#F8F4EA] text-4xl">{model.icon}</div>
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl border-2 border-[#0A1F44] bg-[#F8F4EA] text-4xl">
+                  {model.icon}
+                </div>
               </div>
-              <p className="mt-5 text-lg font-bold leading-8 opacity-75">{model.subtitle}</p>
+              <p className="mt-5 text-lg font-bold leading-8 opacity-75">
+                {model.subtitle}
+              </p>
               <div className="mt-8 space-y-4">
                 {model.points.map((point) => (
-                  <div key={point} className="flex gap-4 rounded-3xl border-2 border-[#0A1F44] bg-[#F8F4EA] p-4">
+                  <div
+                    key={point}
+                    className="flex gap-4 rounded-3xl border-2 border-[#0A1F44] bg-[#F8F4EA] p-4"
+                  >
                     <span>✅</span>
                     <p className="font-bold leading-7">{point}</p>
                   </div>
@@ -335,26 +419,50 @@ function TransparencyPage() {
           <div>
             <SectionLabel>Our Main Core</SectionLabel>
             <h1 className="mt-4 text-5xl font-black leading-[0.95] md:text-8xl">
-              <GradientTitle>Transparency is our operating system.</GradientTitle>
+              <GradientTitle>
+                Transparency is our operating system.
+              </GradientTitle>
             </h1>
             <p className="mt-7 max-w-2xl text-lg font-medium leading-8 opacity-75 md:text-xl">
-              Partner Desk is built around clean visibility. You should know where every dollar goes: salaries, invoices, office costs, vendor bills, and management charges.
+              Partner Desk is built around clean visibility. You should know
+              where every dollar goes: salaries, invoices, office costs, vendor
+              bills, and management charges.
             </p>
           </div>
           <div className="rounded-[2.5rem] border-2 border-[#0A1F44] bg-[#0A1F44] p-8 text-[#F8F4EA] shadow-[12px_12px_0_#111111]">
             <p className="text-6xl font-black">100%</p>
-            <p className="mt-3 text-2xl font-black">Clear billing. Clear salaries. Clear invoices.</p>
-            <p className="mt-4 font-medium leading-7 opacity-75">No hidden confusion. No messy reporting. Just structured operational clarity.</p>
+            <p className="mt-3 text-2xl font-black">
+              Clear billing. Clear salaries. Clear invoices.
+            </p>
+            <p className="mt-4 font-medium leading-7 opacity-75">
+              No hidden confusion. No messy reporting. Just structured
+              operational clarity.
+            </p>
           </div>
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {[
-            ["💳", "Billing Transparency", "Monthly billing breakdowns with clear categories for office, management, hiring, and support costs."],
-            ["👤", "Salary Transparency", "Clear salary visibility so you understand the real cost of every role and every department."],
-            ["🧾", "Invoice Transparency", "Vendor invoices, office invoices, and service invoices are organized and shared in a simple format."],
+            [
+              "💳",
+              "Billing Transparency",
+              "Monthly billing breakdowns with clear categories for office, management, hiring, and support costs.",
+            ],
+            [
+              "👤",
+              "Salary Transparency",
+              "Clear salary visibility so you understand the real cost of every role and every department.",
+            ],
+            [
+              "🧾",
+              "Invoice Transparency",
+              "Vendor invoices, office invoices, and service invoices are organized and shared in a simple format.",
+            ],
           ].map(([icon, title, text]) => (
-            <div key={title} className="rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44]">
+            <div
+              key={title}
+              className="rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44]"
+            >
               <div className="text-4xl">{icon}</div>
               <h3 className="mt-5 text-3xl font-black">
                 <GradientTitle>{title}</GradientTitle>
@@ -377,7 +485,10 @@ function TransparencyPage() {
               "No surprise operational expenses",
               "Better control over offshore office spending",
             ].map((item) => (
-              <div key={item} className="flex items-center gap-4 rounded-3xl bg-[#F8F4EA] p-5 font-black">
+              <div
+                key={item}
+                className="flex items-center gap-4 rounded-3xl bg-[#F8F4EA] p-5 font-black"
+              >
                 <span>✅</span> {item}
               </div>
             ))}
@@ -397,29 +508,55 @@ function AboutPage() {
           <div>
             <SectionLabel>About Partner Desk</SectionLabel>
             <h1 className="mt-4 text-5xl font-black leading-[0.95] md:text-8xl">
-              <GradientTitle>We help companies build their ecosystem.</GradientTitle>
+              <GradientTitle>
+                We help companies build their ecosystem.
+              </GradientTitle>
             </h1>
             <p className="mt-7 max-w-2xl text-lg font-medium leading-8 opacity-75 md:text-xl">
-              We help global companies build complete operating ecosystems with the right people, right space, right management, and right cost structure.
+              We help global companies build complete operating ecosystems with
+              the right people, right space, right management, and right cost
+              structure.
             </p>
             <p className="mt-5 max-w-2xl text-lg font-medium leading-8 opacity-75 md:text-xl">
-              We have helped 10+ companies build their ecosystem in India, where companies can access strong talent and practical operational costs compared to expensive markets.
+              We have helped 10+ companies build their ecosystem in India, where
+              companies can access strong talent and practical operational costs
+              compared to expensive markets.
             </p>
           </div>
           <div className="rounded-[2.5rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-8 shadow-[12px_12px_0_#0A1F44]">
             <p className="text-7xl font-black tracking-[-0.07em]">10+</p>
-            <p className="mt-3 text-3xl font-black">Companies supported in building offshore ecosystems.</p>
-            <p className="mt-5 font-medium leading-7 opacity-70">From hiring to office setup, our focus is to create a practical, scalable, and transparent operating base.</p>
+            <p className="mt-3 text-3xl font-black">
+              Companies supported in building offshore ecosystems.
+            </p>
+            <p className="mt-5 font-medium leading-7 opacity-70">
+              From hiring to office setup, our focus is to create a practical,
+              scalable, and transparent operating base.
+            </p>
           </div>
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {[
-            ["🌍", "Global Thinking", "Built for US and Canada companies that want serious operational expansion."],
-            ["🧠", "Talent First", "We believe the right person in the right place can change the speed of a company."],
-            ["🏗️", "Ecosystem Building", "We merge hiring, workspace, infrastructure, management, and money planning into one system."],
+            [
+              "🌍",
+              "Global Thinking",
+              "Built for US and Canada companies that want serious operational expansion.",
+            ],
+            [
+              "🧠",
+              "Talent First",
+              "We believe the right person in the right place can change the speed of a company.",
+            ],
+            [
+              "🏗️",
+              "Ecosystem Building",
+              "We merge hiring, workspace, infrastructure, management, and money planning into one system.",
+            ],
           ].map(([icon, title, text]) => (
-            <div key={title} className="rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44]">
+            <div
+              key={title}
+              className="rounded-[2rem] border-2 border-[#0A1F44] bg-[#F8F4EA] p-6 shadow-[7px_7px_0_#0A1F44]"
+            >
               <div className="text-4xl">{icon}</div>
               <h3 className="mt-5 text-3xl font-black">
                 <GradientTitle>{title}</GradientTitle>
@@ -439,15 +576,21 @@ function ContactSection() {
     <section id="contact" className="px-5 pb-16 md:px-8">
       <div className="mx-auto max-w-7xl rounded-[3rem] border-2 border-[#0A1F44] bg-[#0A1F44] p-8 text-center text-[#F8F4EA] shadow-[12px_12px_0_#111111] md:p-16">
         <p className="font-black uppercase opacity-60">Ready to expand?</p>
-        <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black md:text-7xl text-[#F8F4EA]">Build your offshore office with confidence.</h2>
+        <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black md:text-7xl text-[#F8F4EA]">
+          Build your offshore office with confidence.
+        </h2>
         <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-8 opacity-75">
-          Tell us your roles, team size, and business goals. We’ll help you plan the people, space, infrastructure, management, and budget.
+          Tell us your roles, team size, and business goals. We’ll help you plan
+          the people, space, infrastructure, management, and budget.
         </p>
-        <div className="mt-9 flex justify-center">
-          <a href="mailto:hello@thepartnerdesk.com" className="inline-flex h-14 items-center justify-center rounded-full bg-[#F8F4EA] px-8 text-base font-black text-black transition hover:bg-[#F8F4EA]">
-            Book a Discovery Call 
+        {/* <div className="mt-9 flex justify-center">
+          <a
+            href="mailto:hello@thepartnerdesk.com"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-[#F8F4EA] px-8 text-base font-black text-black transition hover:bg-[#F8F4EA]"
+          >
+            Email Us
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -486,25 +629,24 @@ export default function App() {
         }}
       />
 
-      <header className="relative z-50 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
-        <button onClick={() => goToPage("Home")} className="flex items-center gap-3 text-left">
-          <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-[#0A1F44]">
-            <img 
-              src="/logo.png" 
-              alt="logo" 
-              className="h-full w-full object-contain p-1" 
+      <header className="relative z-50 mx-auto flex max-w-7xl items-center justify-between px-5 py-1 md:px-8">
+        <button
+          onClick={() => goToPage("Home")}
+          className="flex items-center gap-3 text-left"
+        >
+          <div className="flex h-32 w-32 items-center justify-center overflow-hidden">
+            <img
+              src="/logo.png"
+              alt="Partner Desk Logo"
+              className="h-full w-full object-contain"
               onError={(e) => {
                 const target = e.currentTarget;
-                target.style.display = 'none';
+                target.style.display = "none";
                 if (target.parentElement) {
-                  target.parentElement.innerHTML = '🤝';
+                  target.parentElement.innerHTML = "🤝";
                 }
-              }} 
+              }}
             />
-          </div>
-          <div>
-            <p className="text-xl font-black tracking-tight">Partner Desk</p>
-            <p className="-mt-1 text-xs font-semibold uppercase opacity-60">Offshore Ops</p>
           </div>
         </button>
 
@@ -518,10 +660,19 @@ export default function App() {
               {item}
             </button>
           ))}
-          <a href="#contact" className="rounded-full border-2 border-[#0A1F44] px-5 py-2 transition hover:bg-[#0A1F44] hover:text-[#F8F4EA]">Start Setup</a>
+          <a
+            href="#contact"
+            className="rounded-full border-2 border-[#0A1F44] px-5 py-2 transition hover:bg-[#0A1F44] hover:text-[#F8F4EA]"
+          >
+            Start Setup
+          </a>
         </nav>
 
-        <button className="text-3xl md:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+        <button
+          className="text-3xl md:hidden"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
           {open ? "×" : "☰"}
         </button>
       </header>
@@ -529,15 +680,30 @@ export default function App() {
       {open && (
         <div className="relative z-40 mx-5 rounded-3xl border-2 border-[#0A1F44] bg-[#F8F4EA] p-5 shadow-[8px_8px_0_#0A1F44] md:hidden">
           {navItems.map((item) => (
-            <button key={item} onClick={() => goToPage(item)} className="block w-full border-b border-[#0A1F44]/15 py-3 text-left font-bold">
+            <button
+              key={item}
+              onClick={() => goToPage(item)}
+              className="block w-full border-b border-[#0A1F44]/15 py-3 text-left font-bold"
+            >
               {item}
             </button>
           ))}
-          <a href="#contact" className="block py-3 font-bold" onClick={() => setOpen(false)}>Start Setup</a>
+          <a
+            href="#contact"
+            className="block py-3 font-bold"
+            onClick={() => setOpen(false)}
+          >
+            Start Setup
+          </a>
         </div>
       )}
 
-      {activePage === "Home" && <HomePage activeService={activeService} setActiveService={setActiveService} />}
+      {activePage === "Home" && (
+        <HomePage
+          activeService={activeService}
+          setActiveService={setActiveService}
+        />
+      )}
       {activePage === "Models" && <ModelsPage />}
       {activePage === "Transparency" && <TransparencyPage />}
       {activePage === "About Us" && <AboutPage />}
