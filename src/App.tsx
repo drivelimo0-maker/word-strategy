@@ -85,7 +85,7 @@ interface HomePageProps {
 function HomePage({ activeService, setActiveService }: HomePageProps) {
   return (
     <PageShell>
-      <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-10 md:grid-cols-2 md:px-8 md:pb-24 md:pt-16">
+      <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-6 md:grid-cols-2 md:px-8 md:pb-24 md:pt-10">
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-[#0A1F44] bg-[#F8F4EA] px-4 py-2 text-sm font-black shadow-[5px_5px_0_#111]">
             ✨ Offshore teams, offices, and operations under one roof.
@@ -634,7 +634,7 @@ export default function App() {
           onClick={() => goToPage("Home")}
           className="flex items-center gap-3 text-left"
         >
-          <div className="flex h-32 w-32 items-center justify-center overflow-hidden">
+          <div className="flex h-48 w-48 items-center justify-center overflow-hidden">
             <img
               src="/logo.png"
               alt="Partner Desk Logo"
