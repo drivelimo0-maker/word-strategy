@@ -596,6 +596,19 @@ function ContactSection() {
   );
 }
 
+function Footer() {
+  return (
+    <footer className="border-t border-[#0A1F44]/10 px-5 py-6 md:px-8">
+      <p className="text-center text-sm font-semibold tracking-wide text-[#0A1F44]/70">
+        Sponsored By :{" "}
+        <span className="font-black text-[#0A1F44]">Ace Advertisers</span>{" "}
+        <span className="mx-2 text-[#0A1F44]/40">×</span>{" "}
+        <span className="font-black text-[#0A1F44]">The Word Strategy</span>
+      </p>
+    </footer>
+  );
+}
+
 export default function App() {
   const [open, setOpen] = useState(false);
   const [activePage, setActivePage] = useState("Home");
@@ -707,6 +720,8 @@ export default function App() {
       {activePage === "Models" && <ModelsPage />}
       {activePage === "Transparency" && <TransparencyPage />}
       {activePage === "About Us" && <AboutPage />}
+
+      <Footer />
     </div>
   );
 }
